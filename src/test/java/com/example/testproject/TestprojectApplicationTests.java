@@ -1,6 +1,5 @@
 package com.example.testproject;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -19,7 +18,6 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 @SpringBootTest
-@Slf4j
 class TestprojectApplicationTests {
 
 	List<String> filesListInDir = new ArrayList<>();
@@ -31,11 +29,18 @@ class TestprojectApplicationTests {
 
 		File dir = new File("C:\\Users\\white\\Desktop\\ziptest");
 		String zipDirName = "C:\\Users\\white\\Desktop\\ziptest\\ziptest.zip";
+		try{
+			zipSingleFile(file, zipFileName);
+		} catch(Exception e){
+			e.getLocalizedMessage();
+		}
+		try{
+			TestprojectApplicationTests testprojectApplicationTests = new TestprojectApplicationTests();
+			testprojectApplicationTests.makeFolderToZip(dir, zipDirName);
+		} catch(Exception e){
+			e.getLocalizedMessage();
+		}
 
-		zipSingleFile(file, zipFileName);
-
-		TestprojectApplicationTests testprojectApplicationTests = new TestprojectApplicationTests();
-		testprojectApplicationTests.makeFolderToZip(dir, zipDirName);
 		}
 
 	@Test
