@@ -9,9 +9,9 @@ import java.io.*;
 @SpringBootTest
 public class SplitFileTest {
 
-    String fileName = "AppPlus-dcmcp-release.apk";
+    String fileName = "README.md";
 
-    String location = "C:\\tmp\\";
+    String location = "/Users/dongin-kim/test/";
 
     String path  = location + fileName;
 

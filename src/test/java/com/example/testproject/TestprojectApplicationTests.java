@@ -24,11 +24,11 @@ class TestprojectApplicationTests {
 
 	@Test
 	void compressor() {
-		File file = new File("C:\\Users\\white\\Desktop\\ziptest\\22-10-14query.txt");
-		String zipFileName = "C:\\Users\\white\\Desktop\\ziptest\\22-10-14query.zip";
+		File file = new File("/Users/dongin-kim/test/README.md");
+		String zipFileName = "/Users/dongin-kim/test/README.zip";
 
-		File dir = new File("C:\\Users\\white\\Desktop\\ziptest");
-		String zipDirName = "C:\\Users\\white\\Desktop\\ziptest\\ziptest.zip";
+		File dir = new File("/Users/dongin-kim/test/zipfolder");
+		String zipDirName = "/Users/dongin-kim/test/zipfolder/test.zip";
 		try{
 			zipSingleFile(file, zipFileName);
 		} catch(Exception e){
@@ -45,8 +45,8 @@ class TestprojectApplicationTests {
 
 	@Test
 	void unZipTest(){
-		Path source = Paths.get("C:\\Users\\white\\Desktop\\manifest_dev.zip");
-		Path target = Paths.get("C:\\tmp");
+		Path source = Paths.get("/Users/dongin-kim/test/zipfolder/test.zip");
+		Path target = Paths.get("/Users/dongin-kim/test/zipfolder/unzipREADME.md");
 
 		unzipFile(source, target);
 	}
